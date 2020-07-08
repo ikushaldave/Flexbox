@@ -697,8 +697,9 @@ By default, the value for flex-basis property is auto, which means the base size
 }
 ```
 
-You don't find difference in `flex-basis` until you change `flex-direction: column`. we will see that now that now the `300px` is the height of the items where in `row` it was width.
+You don't find difference in `flex-basis` until you change `flex-direction: column`. we will see that now that now the `300px` is the height of the items where in `row` it was width. 
 
+> The `flex-basis` work on main-axis
 
 - ### `flex`:
 
