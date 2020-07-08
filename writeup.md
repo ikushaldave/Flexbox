@@ -1,6 +1,6 @@
 # Flexbox
 
-Flexbox is a 1D layout method which means that flebox items can be layout in horinzontal or vertically axis.
+Flexbox is a 1D layout method which means that flebox items can be layout in horinzontal or vertically axis at a time.
 
 Flexbox provides a more efficient way to layout elements. It gives us the ability to align the items and distribute space among the items in a container - even though the size of the elements is unknown or dynamic. With the flexbox, we get the power of flexibility(as the word flex says) to fill the available space. So that elements can easily accommodate according to the size of screens. In a flexbox container, the item expands to fill the free space as well as shrinks to prevent overflow.
 
@@ -76,7 +76,7 @@ The following properties enable a `flex` zone. In which all children act as `fle
 }
 ```
 
-`display: flex` adding following make all childen in one line default as `row` & every element take width according to content. if children has width they take width value in consideration. Also Container take full width as a `block` element
+`display: flex` adding following make all childen in one line default as `row` & every element take width according to content. if children has width they take width value in consideration & try to fill container as possible or can overflow if can't fit on container. Also Container take full width as a `block` element
 
 !["display: flex"](./images/display-flex.jpg)
 
@@ -109,11 +109,10 @@ The important point is that the `main-axis` is not necessary to remain always in
 The `flex-direction` property can accept four values:
 
 ```css
-  .container {
+.container {
     flex-direction: row || column || row-reverse || column-reverse;
-  }
+}
 ```
-
 
 ###### Row(default)
 
@@ -504,7 +503,7 @@ Let's add a few more flex items so that we have a multi-line flex-container. Rem
 }
 ```
 
-The `stretch is the default value for the`align-content` property. All the items are stretched to take up the remaining space on the "cross-axis".
+The stretch is the default value for the `align-content` property. All the items are stretched to take up the remaining space on the "cross-axis".
 
 ![Flexbox, align-content: stretch](./images/align-content-strech-default.png))
 
@@ -616,7 +615,7 @@ Suppose we have items inside a flex-container and we want the items to grow in t
 }
 ```
 
-![Flex Grow Property](./images/flex-grow.png);
+![Flex Grow Property](./images/flex-grow.png)
 
 If all the items have `flex-grow` set to `1` the extra space will be distributed equally to all the items.
 
@@ -663,6 +662,18 @@ In above we see when we resize window to smaller the `.box3` get shrinked at fas
 ![Flex Shrink Property](./images/flex-shrink-file-1.gif)
 
 > Higher the value faster it shrink corresponding to others.
+
+However, if we set 0 value for the flex-shrink property the item size won't reduce as per the size of the screens. The item will overflow in the flex container.
+
+```css
+.box2 {
+  flex-shrink: 0;
+}
+```
+
+The all flex-items have width of `300px` if we resize a screen you will find that it is not shrinking it is respecting a width.
+
+![Flex Shrink Property](./images/flex-shrink-0.gif)
 
 - ### `flex-basis`:
 
