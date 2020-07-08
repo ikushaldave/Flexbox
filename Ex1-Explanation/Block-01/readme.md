@@ -152,7 +152,7 @@ This value makes all the items in the `flex-container` laid down top to bottom. 
 
 The `row-reverse` is similar to row but this time all the items will sit from right to left means in the opposite direction.
 
-![Flexbox, flex-direction: row-reverse](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/row-reverse.png)
+![Flexbox, flex-direction: row-reverse](../../images/row-reverse.png)
 
 ###### Column Reverse
 
@@ -164,7 +164,7 @@ The `row-reverse` is similar to row but this time all the items will sit from ri
 
 The `column-reverse` is also opposite to the `column` value. The item will lay down from bottom to top.
 
-![Flexbox, flex-direction: column-reverse](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/flexbox/column-reverse.png)
+![Flexbox, flex-direction: column-reverse](../../images/column-reverse.png)
 
 ##### B. Flex Wrap
 
